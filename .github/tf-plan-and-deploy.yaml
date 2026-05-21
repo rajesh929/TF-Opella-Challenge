@@ -49,5 +49,6 @@ jobs:
         working-directory: tf-envs/${{ github.event.inputs.environment }}
 
       - name: Terraform Apply
-        run: terraform apply -auto-approve 
+        run: terraform apply -auto-approve
+        if: false
         working-directory: tf-envs/${{ github.event.inputs.environment }}
