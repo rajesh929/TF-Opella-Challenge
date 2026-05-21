@@ -38,17 +38,17 @@ jobs:
 
       - name: Initialize Terraform
         run: terraform init
-        working-directory: tf-envs/${{ github.event.inputs.environment }}
+        working-directory: ./tf-envs/${{ github.event.inputs.environment }}
 
       - name: Terraform Validate
         run: terraform validate
-        working-directory: tf-envs/${{ github.event.inputs.environment }}
+        working-directory: ./tf-envs/${{ github.event.inputs.environment }}
 
       - name: Terraform Plan
         run: terraform plan 
-        working-directory: tf-envs/${{ github.event.inputs.environment }}
+        working-directory: ./tf-envs/${{ github.event.inputs.environment }}
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
         if: false
-        working-directory: tf-envs/${{ github.event.inputs.environment }}
+        working-directory: ./tf-envs/${{ github.event.inputs.environment }}
