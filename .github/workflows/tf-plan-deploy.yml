@@ -1,5 +1,5 @@
 # This workflow installs the latest version of Terraform CLI
-# On push `terraform apply` will be executed on respective environment.
+# This is a manual workflow, while triggering we can select dev or prod environment to deploy.
 
 on:
   workflow_dispatch:
